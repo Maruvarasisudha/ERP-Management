@@ -10,8 +10,10 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ToastrModule } from 'ngx-toastr';
-import { ViewComponent } from './view/view.component';
+
 import { NgxSpinnerModule } from "ngx-spinner";
+import{AccountModule}from "./account/account.module";
+
 interface NgxSpinnerConfig {
   type?: string;
 }
@@ -19,7 +21,8 @@ interface NgxSpinnerConfig {
 @NgModule({
   declarations: [
     AppComponent,
-    ViewComponent
+   
+   
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ interface NgxSpinnerConfig {
     MatFormFieldModule,
     MatNativeDateModule ,
     ToastrModule.forRoot(),
-    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' })
+    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
+    AccountModule
 
   ],
   providers: [],
